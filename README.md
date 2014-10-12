@@ -7,6 +7,6 @@ Information System that focus on order processing, and basically is planned to b
 
   Member of the team   :
       - Josua Deston Girsang   /  1103121273
-      - Maulina Ngalimatul G   /  1103
-      - Annisa Imadi Puti      /  1103
-      - Ikvina Af'idatun Nafis /  1103
+      - Maulina Ngalimatul G   /  1103120060
+      - Annisa Imadi Puti      /  1103120059
+      - Ikvina Af'idatun Nafis /  1103120066
