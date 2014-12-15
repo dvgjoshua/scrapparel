@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 09, 2013 at 06:47 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Inang: 127.0.0.1
+-- Waktu pembuatan: 15 Des 2014 pada 13.47
+-- Versi Server: 5.6.14
+-- Versi PHP: 5.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,15 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `menshop`
+-- Basis data: `menshop`
 --
-CREATE DATABASE IF NOT EXISTS `menshop` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `menshop`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admins`
+-- Struktur dari tabel `admins`
 --
 
 CREATE TABLE IF NOT EXISTS `admins` (
@@ -40,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `admins`
+-- Dumping data untuk tabel `admins`
 --
 
 INSERT INTO `admins` (`username`, `password`, `nama_lengkap`, `email`, `no_telp`, `level`, `blokir`) VALUES
@@ -49,7 +47,7 @@ INSERT INTO `admins` (`username`, `password`, `nama_lengkap`, `email`, `no_telp`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bank`
+-- Struktur dari tabel `bank`
 --
 
 CREATE TABLE IF NOT EXISTS `bank` (
@@ -62,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `bank` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `bank`
+-- Dumping data untuk tabel `bank`
 --
 
 INSERT INTO `bank` (`id_bank`, `nama_bank`, `no_rekening`, `pemilik`, `gambar`) VALUES
@@ -74,7 +72,7 @@ INSERT INTO `bank` (`id_bank`, `nama_bank`, `no_rekening`, `pemilik`, `gambar`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `banner`
+-- Struktur dari tabel `banner`
 --
 
 CREATE TABLE IF NOT EXISTS `banner` (
@@ -87,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `banner` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=19 ;
 
 --
--- Dumping data for table `banner`
+-- Dumping data untuk tabel `banner`
 --
 
 INSERT INTO `banner` (`id_banner`, `judul`, `url`, `gambar`, `tgl_posting`) VALUES
@@ -98,7 +96,7 @@ INSERT INTO `banner` (`id_banner`, `judul`, `url`, `gambar`, `tgl_posting`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download`
+-- Struktur dari tabel `download`
 --
 
 CREATE TABLE IF NOT EXISTS `download` (
@@ -111,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `download` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `download`
+-- Dumping data untuk tabel `download`
 --
 
 INSERT INTO `download` (`id_download`, `judul`, `nama_file`, `tgl_posting`, `hits`) VALUES
@@ -120,7 +118,7 @@ INSERT INTO `download` (`id_download`, `judul`, `nama_file`, `tgl_posting`, `hit
 -- --------------------------------------------------------
 
 --
--- Table structure for table `header`
+-- Struktur dari tabel `header`
 --
 
 CREATE TABLE IF NOT EXISTS `header` (
@@ -134,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `header` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
--- Dumping data for table `header`
+-- Dumping data untuk tabel `header`
 --
 
 INSERT INTO `header` (`id_header`, `judul`, `url`, `gambar`, `deskripsi`, `tgl_posting`) VALUES
@@ -146,7 +144,7 @@ INSERT INTO `header` (`id_header`, `judul`, `url`, `gambar`, `deskripsi`, `tgl_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hubungi`
+-- Struktur dari tabel `hubungi`
 --
 
 CREATE TABLE IF NOT EXISTS `hubungi` (
@@ -162,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `hubungi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE IF NOT EXISTS `kategori` (
@@ -170,28 +168,22 @@ CREATE TABLE IF NOT EXISTS `kategori` (
   `nama_kategori` varchar(100) COLLATE latin1_general_ci NOT NULL,
   `kategori_seo` varchar(100) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id_kategori`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=26 ;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `kategori_seo`) VALUES
-(17, 'Koleksi Kemeja', 'koleksi-kemeja'),
-(16, 'Ikat Pinggang', 'ikat-pinggang'),
-(15, 'Celana Jeans', 'celana-jeans'),
-(14, 'Aneka Kaos', 'aneka-kaos'),
-(18, 'Aneka Topi', 'aneka-topi'),
-(19, 'Aneka Tas', 'aneka-tas'),
-(20, 'Ragam Dompet', 'ragam-dompet'),
-(21, 'Aksesoris Lainnya', 'aksesoris-lainnya'),
-(22, 'Aneka Sepatu', 'aneka-sepatu'),
-(23, 'Aneka Jam', 'aneka-jam');
+(16, 'ACCESSORIES', 'accessories'),
+(15, 'SHOES', 'shoes'),
+(14, 'SINGLE T-SHIRT', 'single-tshirt'),
+(25, 'COUPLE T-SHIRT', 'couple-tshirt');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `komentar`
+-- Struktur dari tabel `komentar`
 --
 
 CREATE TABLE IF NOT EXISTS `komentar` (
@@ -207,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `komentar` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=83 ;
 
 --
--- Dumping data for table `komentar`
+-- Dumping data untuk tabel `komentar`
 --
 
 INSERT INTO `komentar` (`id_komentar`, `id_produk`, `nama_komentar`, `url`, `isi_komentar`, `tgl`, `jam_komentar`, `aktif`) VALUES
@@ -218,7 +210,7 @@ INSERT INTO `komentar` (`id_komentar`, `id_produk`, `nama_komentar`, `url`, `isi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kota`
+-- Struktur dari tabel `kota`
 --
 
 CREATE TABLE IF NOT EXISTS `kota` (
@@ -230,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `kota` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
--- Dumping data for table `kota`
+-- Dumping data untuk tabel `kota`
 --
 
 INSERT INTO `kota` (`id_kota`, `id_perusahaan`, `nama_kota`, `ongkos_kirim`) VALUES
@@ -245,7 +237,7 @@ INSERT INTO `kota` (`id_kota`, `id_perusahaan`, `nama_kota`, `ongkos_kirim`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kustomer`
+-- Struktur dari tabel `kustomer`
 --
 
 CREATE TABLE IF NOT EXISTS `kustomer` (
@@ -258,10 +250,10 @@ CREATE TABLE IF NOT EXISTS `kustomer` (
   `id_kota` int(5) NOT NULL,
   `aktif` enum('N','Y') DEFAULT 'Y',
   PRIMARY KEY (`id_kustomer`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `kustomer`
+-- Dumping data untuk tabel `kustomer`
 --
 
 INSERT INTO `kustomer` (`id_kustomer`, `password`, `nama_lengkap`, `alamat`, `email`, `telpon`, `id_kota`, `aktif`) VALUES
@@ -269,12 +261,13 @@ INSERT INTO `kustomer` (`id_kustomer`, `password`, `nama_lengkap`, `alamat`, `em
 (2, 'bf91184832ff2e9b92e94ef61ad52e53', 'ilamsyah', 'Kp. sawah dalam no 56', 'ilamsyah@yahoo.com', '02197604687', 9, 'Y'),
 (3, '0e987a3e88814566657aed9e53e38328', 'ilamsyah', 'Kp. sawah dalam no 67 kel. panunggangan utara', 'ilamsyah@ymail.com', '02197604687', 1, 'N'),
 (4, '5f4dcc3b5aa765d61d8327deb882cf99', 'faiza', 'Kp. sawah dalam no 67', 'faiza_sidqi@gmail.com', '087771063961', 9, 'Y'),
-(8, '5f4dcc3b5aa765d61d8327deb882cf99', 'Lyra virna', 'BSD City', 'lyra82@gmail.com', '087771063961', 5, 'Y');
+(8, '5f4dcc3b5aa765d61d8327deb882cf99', 'Lyra virna', 'BSD City', 'lyra82@gmail.com', '087771063961', 5, 'Y'),
+(10, '0e1b700dae4829bf9e1b9a43279b1144', 'Maulina', 'Bandung', 'maaaul@yahoo.co.id', '087824170407', 6, 'Y');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mainmenu`
+-- Struktur dari tabel `mainmenu`
 --
 
 CREATE TABLE IF NOT EXISTS `mainmenu` (
@@ -286,7 +279,7 @@ CREATE TABLE IF NOT EXISTS `mainmenu` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
--- Dumping data for table `mainmenu`
+-- Dumping data untuk tabel `mainmenu`
 --
 
 INSERT INTO `mainmenu` (`id_main`, `nama_menu`, `link`, `aktif`) VALUES
@@ -301,7 +294,7 @@ INSERT INTO `mainmenu` (`id_main`, `nama_menu`, `link`, `aktif`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `modul`
+-- Struktur dari tabel `modul`
 --
 
 CREATE TABLE IF NOT EXISTS `modul` (
@@ -317,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `modul` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=119 ;
 
 --
--- Dumping data for table `modul`
+-- Dumping data untuk tabel `modul`
 --
 
 INSERT INTO `modul` (`id_modul`, `nama_modul`, `link`, `static_content`, `gambar`, `status`, `aktif`, `urutan`) VALUES
@@ -393,7 +386,7 @@ INSERT INTO `modul` (`id_modul`, `nama_modul`, `link`, `static_content`, `gambar
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Struktur dari tabel `orders`
 --
 
 CREATE TABLE IF NOT EXISTS `orders` (
@@ -406,18 +399,18 @@ CREATE TABLE IF NOT EXISTS `orders` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=49 ;
 
 --
--- Dumping data for table `orders`
+-- Dumping data untuk tabel `orders`
 --
 
 INSERT INTO `orders` (`id_orders`, `status_order`, `tgl_order`, `jam_order`, `id_kustomer`) VALUES
-(48, 'Baru', '2013-12-02', '06:33:37', 2),
-(47, 'Baru', '2013-12-02', '05:56:31', 2),
-(46, 'Lunas/Terkirim', '2013-11-29', '05:30:34', 8);
+(48, 'Baru', '2014-12-02', '06:33:37', 2),
+(47, 'Baru', '2014-12-02', '05:56:31', 2),
+(46, 'Lunas/Terkirim', '2014-12-10', '05:30:34', 8);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders_detail`
+-- Struktur dari tabel `orders_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `orders_detail` (
@@ -427,7 +420,7 @@ CREATE TABLE IF NOT EXISTS `orders_detail` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `orders_detail`
+-- Dumping data untuk tabel `orders_detail`
 --
 
 INSERT INTO `orders_detail` (`id_orders`, `id_produk`, `jumlah`) VALUES
@@ -438,7 +431,7 @@ INSERT INTO `orders_detail` (`id_orders`, `id_produk`, `jumlah`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders_temp`
+-- Struktur dari tabel `orders_temp`
 --
 
 CREATE TABLE IF NOT EXISTS `orders_temp` (
@@ -450,19 +443,20 @@ CREATE TABLE IF NOT EXISTS `orders_temp` (
   `jam_order_temp` time NOT NULL,
   `stok_temp` int(5) NOT NULL,
   PRIMARY KEY (`id_orders_temp`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=293 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=298 ;
 
 --
--- Dumping data for table `orders_temp`
+-- Dumping data untuk tabel `orders_temp`
 --
 
 INSERT INTO `orders_temp` (`id_orders_temp`, `id_produk`, `id_session`, `jumlah`, `tgl_order_temp`, `jam_order_temp`, `stok_temp`) VALUES
-(291, 560, '5cc0d31f77b20ab79428e1c4c7e07298', 1, '2013-12-02', '05:25:09', 3);
+(297, 610, '5953o1eflm68g1alr0m0l4uqu5', 3, '2014-12-15', '19:24:34', 5),
+(296, 617, '5953o1eflm68g1alr0m0l4uqu5', 1, '2014-12-15', '19:08:30', 5);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `poling`
+-- Struktur dari tabel `poling`
 --
 
 CREATE TABLE IF NOT EXISTS `poling` (
@@ -475,7 +469,7 @@ CREATE TABLE IF NOT EXISTS `poling` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `poling`
+-- Dumping data untuk tabel `poling`
 --
 
 INSERT INTO `poling` (`id_poling`, `pilihan`, `status`, `rating`, `aktif`) VALUES
@@ -487,7 +481,7 @@ INSERT INTO `poling` (`id_poling`, `pilihan`, `status`, `rating`, `aktif`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE IF NOT EXISTS `produk` (
@@ -506,34 +500,69 @@ CREATE TABLE IF NOT EXISTS `produk` (
   `status` varchar(10) DEFAULT NULL,
   `review` text,
   PRIMARY KEY (`id_produk`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=581 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=633 ;
 
 --
--- Dumping data for table `produk`
+-- Dumping data untuk tabel `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `id_kategori`, `nama_produk`, `produk_seo`, `deskripsi`, `harga`, `stok`, `berat`, `tgl_masuk`, `gambar`, `dibeli`, `diskon`, `status`, `review`) VALUES
-(560, 19, '4 wheel packing case', '4-wheel-packing-case', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 200000, 2, '1.00', '2013-10-31', '29_7371457.jpg', 2, 15, 'baru', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(561, 15, 'Classic Leg Jeans', '329-classic-straight-leg-jeans', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 120000, 1, '0.00', '2013-10-31', '44_7846615.jpg', 2, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(562, 15, 'Vintage Leg Jeans', '361-vintage-straight-leg-jeans', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 100000, 5, '1.00', '2013-10-31', '31_7366875.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(563, 18, 'Adidas Originals AC', 'adidas-originalsac-cap-trefoil-flat', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 120000, 0, '0.00', '2013-10-31', '99adidas-originals-0208-164521-1-zoom.jpg', 1, 10, 'baru', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(564, 21, 'AM EyewearCobsey', 'am-eyewearcobsey', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 95000, 5, '0.00', '2013-10-31', '72colab-2383-380921-1-zoom.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(565, 20, 'Bellroy Note Sleeve', 'bellroy-note-sleeve', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 100000, 15, '0.00', '2013-10-31', '6bellroy-7596-24547-1-zoom.jpg', 1, 5, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(566, 20, 'Card Wallet', 'ben-shermangingham-card-wallet', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 120000, 10, '0.00', '2013-10-31', '31ben-sherman-7194-955911-1-zoom.jpg', 1, 5, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(567, 21, 'CKPack Geometric', 'calvin-klein3-pack-geometric', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 100000, 5, '0.00', '2013-10-31', '21calvin-klein-3322-550331-1-zoom.jpg', 1, 0, 'baru', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(568, 22, 'Classic Moc Boot', 'classic-moc-boot', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 550000, 5, '1.00', '2013-10-31', '67_6285568.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(569, 21, 'Kramer REVOLTE', 'colabelke-kramer-revolte', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 100000, 15, '0.00', '2013-10-31', '28colab-2383-380921-1-zoom.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(570, 19, 'Commuter Backpack', 'commuter-backpack', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 120000, 10, '0.00', '2013-10-31', '39_8263858.jpg', 1, 0, 'baru', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(571, 21, 'Cotton Knit Tie', 'cotton-knit-tie', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 300000, 5, '0.00', '2013-10-31', '37_7930334.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(572, 23, 'The Fortune', 'eckóthe-fortune', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 120000, 5, '0.00', '2013-10-31', '47ecko-7761-83579-1-zoom.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(573, 18, 'Runty 2 Driving Cap', 'ek®--runty-2-driving-cap', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 95000, 5, '0.00', '2013-10-31', '13_7390526.jpg', 1, 0, 'baru', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(574, 17, 'Silk Campshirt', 'esparto-fields-silk-campshirt', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br />\r\n<br />\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 250000, 10, '0.00', '2013-10-31', '6_8227789.jpg', 1, 0, 'lama', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n'),
-(575, 14, 'Comfort Fit Piqué Polo', 'comfort-fit-piqué-polo', '<span class="center_content2">Isi keterangan produk di sini.&nbsp; Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh. Isi keterangan \r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di sini.\r\nTeks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. Isi keterangan produk di sini. Teks ini hanyalah contoh. Isi \r\nketerangan produk di sini. Teks ini hanyalah contoh.<br>\r\n<br>\r\nIsi keterangan produk di sini.&nbsp; Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh.Isi keterangan produk di sini. Teks ini hanyalah contoh.\r\nIsi keterangan produk di sini. Teks ini hanyalah contoh. Isi keterangan\r\nproduk di sini. Teks ini hanyalah contoh. Isi keterangan produk di \r\nsini. Teks ini hanyalah contoh. Isi keterangan produk di sini. Teks ini \r\nhanyalah contoh. Isi keterangan produk di sini. Teks ini hanyalah \r\ncontoh. \r\n</span>\r\n', 120000, 5, '0.00', '2013-10-31', '4715_8043174.jpg', 1, 10, 'baru', '<div align="justify">\r\nSaya suka jeans ini karena begitu sederhana dan bisa dipakai untuk apa pun. tampilannya sederhana tapi menurut saya begitulah celana jins seharusnya. Jika saya ingin celana mewah maka harusnya saya membeli celana mewah, bukan jeans. Levi selalu menjadi merek jeans favorit saya .Anggapan bahwa orang-orang Amerika memiliki kualitas yang rendah , tapi hanya sedikit sedikit dari mereka. Saya rasa Anda akan mendapatkan apa yang Anda bayar. Meskipun demikian , produk yang baik , cocok , lima bintang, meskipun waktu berikutnya saya akan memilih untuk yang Inggris lagi !<br />\r\nSuami sangat senang dengan produk ini ... pas dan cocok, 34/34 dan terlihat cocok dan nyaman ... walaupun telah beberapa kali dicuci dan memegang tetap terlihat bagus ....<br />\r\n<br />\r\nHanya menerima penyerahan sepasang hitam , pengiriman jauh lebih lambat dari biasanya standar Amazon tetapi dalam jendela yang ditentukan . Jeans diberi label sebagai dibuat di Meksiko jadi saya kira mereka adalah saham AS asli . Pemasangannya adalah , warna hitam yang mendalam baik dan bahkan seluruh jeans, menyelesaikan sangat baik dan denim yang berat tanpa kasar . Ini semua dapat saya lakukan untuk menahan diri memesan lebih pasang rentang lurus jauhnya.Staf ukuran yang tersedia fantastis , tidak ada perubahan panjang dibutuhkan .\r\n</div>\r\n');
+(581, 14, 'BELUM MAKAN', 'belum-makan', '', 110000, 0, '0.00', '2014-11-14', '68belum-makan.jpg', 1, 0, NULL, NULL),
+(617, 15, 'CATHERINE ZEBRA', 'catherine-zebra', '', 265000, 5, '0.00', '2014-12-14', '84catherine-zebra-jones.jpg', 1, 0, NULL, NULL),
+(610, 25, 'SUPIR', 'supir', '', 110000, 5, '0.00', '2014-12-05', '23supir-majikan-couple.jpg', 1, 0, NULL, NULL),
+(611, 25, 'SAMBAL', 'sambal', '', 110000, 5, '0.00', '2014-12-05', '38sambal-sambal-tomat.jpg', 1, 0, NULL, NULL),
+(612, 25, 'TOMAT', 'tomat', '', 110000, 5, '0.00', '2014-12-05', '21tomat-sambal-tomat.jpg', 1, 0, NULL, NULL),
+(613, 25, 'SECURITY', 'security', '', 110000, 5, '0.00', '2014-12-05', '63security-vip-security.jpg', 1, 0, NULL, NULL),
+(614, 25, 'VIP', 'vip', '', 110000, 5, '0.00', '2014-12-05', '37vip-vip-security.jpg', 1, 0, NULL, NULL),
+(615, 14, 'OTW', 'otw', '', 110000, 5, '0.00', '2014-12-05', '60otw-on-the-way (1).jpg', 1, 0, NULL, NULL),
+(618, 15, 'GIRAFFER LOPEZ', 'giraffer-lopez', '', 265000, 5, '0.00', '2014-12-14', '5giraffer-lopez-g-lo.jpg', 1, 0, NULL, NULL),
+(619, 15, 'LADY BABA', 'lady-baba', '', 265000, 5, '0.00', '2014-12-14', '62lady-baba.jpg', 1, 0, NULL, NULL),
+(620, 15, 'MEGAN FOXY', 'megan-foxy', '', 265000, 5, '0.00', '2014-12-14', '42megan-foxy.jpg', 1, 0, NULL, NULL),
+(621, 15, 'PANDA', 'panda', '', 265000, 5, '0.00', '2014-12-14', '85panda-po.jpg', 1, 0, NULL, NULL),
+(622, 15, 'PIGGI MELATI', 'piggi-melati', '', 265000, 5, '0.00', '2014-12-14', '97piggy-melati.jpg', 1, 0, NULL, NULL),
+(623, 15, 'PINEAPPLE', 'pineapple', '', 265000, 5, '0.00', '2014-12-14', '78pineapple-flatshoes.jpg', 1, 0, NULL, NULL),
+(624, 15, 'PRINCESS FROGGY', 'princess-froggy', '', 265000, 4, '0.00', '2014-12-14', '79princess-froggy.jpg', 1, 0, NULL, NULL),
+(625, 16, 'CHEESE', 'cheese', '', 55000, 5, '0.00', '2014-12-14', '43cheese.jpg', 1, 0, NULL, NULL),
+(626, 16, 'DAKOTA FANING', 'dakota-faning', '', 55000, 5, '0.00', '2014-12-14', '54dakota-fanning.jpg', 1, 0, NULL, NULL),
+(627, 16, 'EMMA WATSON', 'emma-watson', '', 55000, 5, '0.00', '2014-12-14', '23emma-watson.jpg', 1, 0, NULL, NULL),
+(628, 16, 'ERROL', 'errol', '', 55000, 5, '0.00', '2014-12-14', '22errol.jpg', 1, 0, NULL, NULL),
+(629, 16, 'FLORA RED', 'flora-red', '', 60000, 5, '0.00', '2014-12-14', '6flora-red (1).jpg', 1, 0, NULL, NULL),
+(630, 16, 'FLORA GREEN', 'flora-green', '', 60000, 5, '0.00', '2014-12-14', '84flora-red.jpg', 1, 0, NULL, NULL),
+(631, 16, 'TREE NEKLACE GREEN', 'tree-neklace-green', '', 45000, 5, '0.00', '2014-12-14', '22tree-necklace-green.jpg', 1, 0, NULL, NULL),
+(632, 0, 'TREE NEKLACE FULLCOLOUR', 'tree-neklace-fullcolour', '', 45000, 5, '0.00', '2014-12-14', '46tree-necklace-rainbow.jpg', 1, 0, NULL, NULL),
+(582, 14, 'ASTRONOT', 'astronot', '', 110000, 5, '0.00', '2014-11-14', '67astronot.jpg', 1, 0, NULL, NULL),
+(583, 14, 'DOKTER', 'dokter', '', 110000, 5, '0.00', '2014-11-14', '26cita-cita-dokter.jpg', 1, 0, NULL, NULL),
+(584, 14, 'PRESIDEN', 'presiden', '', 110000, 5, '0.00', '2014-11-14', '36presiden (2).jpg', 1, 0, NULL, NULL),
+(585, 0, 'LULUS', 'lulus', '', 110000, 5, '0.00', '2014-11-14', '72lulus (1).jpg', 1, 0, NULL, NULL),
+(586, 14, 'BELUM GAJIAN', 'belum-gajian', '', 110000, 5, '0.00', '2014-11-16', '10belum-gajian.jpg', 1, 0, NULL, NULL),
+(587, 14, 'BELUM TIDUR', 'belum-tidur', '', 110000, 5, '0.00', '2014-11-16', '78belum-makan-glow-in-the-dark.jpg', 1, 0, NULL, NULL),
+(588, 14, 'BESOK LIBUR', 'besok-libur', '', 110000, 5, '0.00', '2014-11-16', '4besok-libur.jpg', 1, 0, NULL, NULL),
+(589, 14, 'BESOK SENIN', 'besok-senin', '', 110000, 5, '0.00', '2014-11-16', '73besok-senin.jpg', 1, 0, NULL, NULL),
+(590, 14, 'BORED', 'bored', '', 110000, 5, '0.00', '2014-11-16', '64bored.jpg', 1, 0, NULL, NULL),
+(591, 14, 'BUSY', 'busy', '', 110000, 5, '0.00', '2014-11-16', '13busy.jpg', 1, 0, NULL, NULL),
+(592, 14, 'CALORIES', 'calories', '', 110000, 5, '0.00', '2014-11-16', '90calories-hour (1).jpg', 1, 0, NULL, NULL),
+(593, 14, 'PILOT', 'pilot', '', 110000, 5, '0.00', '2014-11-16', '38cita-cita-pilot.jpg', 1, 0, NULL, NULL),
+(616, 15, 'Bridney Spears', 'bridney-spears', '', 265000, 5, '0.00', '2014-12-14', '52birdney-spears.jpg', 1, 0, NULL, NULL),
+(595, 0, 'DEADLINE THEORY', 'deadline-theory', '', 110000, 5, '0.00', '2014-11-16', '25deadline-theory (1).jpg', 1, 0, NULL, NULL),
+(596, 14, 'DO WHAT YOU LOVE', 'do-what-you-love', '', 110000, 5, '0.00', '2014-11-16', '53do-what-you-love.jpg', 1, 0, NULL, NULL),
+(597, 14, 'FREE WI-FI', 'free-wifi', '', 110000, 5, '0.00', '2014-11-16', '8free-wi-fi.jpg', 1, 0, NULL, NULL),
+(598, 14, 'HAPPY', 'happy', '', 110000, 5, '0.00', '2014-11-16', '25happy.jpg', 1, 0, NULL, NULL),
+(599, 0, 'HI - CALCIUM', 'hi--calcium', '', 110000, 5, '0.00', '2014-11-16', '46hi-calcium.jpg', 1, 0, NULL, NULL),
+(600, 0, 'JOMBLO - THEORY', 'jomblo--theory', '', 110000, 5, '0.00', '2014-11-16', '55jomblo-theory.jpg', 1, 0, NULL, NULL),
+(601, 0, 'LOVED', 'loved', '', 110000, 5, '0.00', '2014-11-16', '20loved.jpg', 1, 0, NULL, NULL),
+(602, 0, 'LOW-FAT', 'lowfat', '', 110000, 5, '0.00', '2014-11-16', '80low-fat.jpg', 1, 0, NULL, NULL),
+(603, 14, 'MAHASISWA THEORY', 'mahasiswa-theory', '', 110000, 5, '0.00', '2014-11-16', '65mahasiswa-theory (1).jpg', 1, 0, NULL, NULL),
+(604, 0, 'MIE INSTAN THEORY', 'mie-instan-theory', '', 110000, 5, '0.00', '2014-11-16', '44mie-instan-theory (1).jpg', 1, 0, NULL, NULL),
+(605, 14, 'POWER RANGERS', 'power-rangers', '', 110000, 5, '0.00', '2014-11-16', '5power-rangers.jpg', 1, 0, NULL, NULL),
+(606, 14, 'SLEEPY ', 'sleepy-', '', 110000, 5, '0.00', '2014-11-16', '68sleepy.jpg', 1, 0, NULL, NULL),
+(607, 25, 'GIANT', 'giant', '', 110000, 5, '0.00', '2014-11-16', '22giant.jpg', 1, 0, NULL, NULL),
+(608, 25, 'JAIKO', 'jaiko', '', 110000, 5, '0.00', '2014-11-16', '62jaiko.jpg', 1, 0, NULL, NULL),
+(609, 25, 'MAJIKAN', 'majikan', '', 110000, 5, '0.00', '2014-12-05', '56majikan-supir-majikan.jpg', 1, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sekilasinfo`
+-- Struktur dari tabel `sekilasinfo`
 --
 
 CREATE TABLE IF NOT EXISTS `sekilasinfo` (
@@ -545,7 +574,7 @@ CREATE TABLE IF NOT EXISTS `sekilasinfo` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `sekilasinfo`
+-- Dumping data untuk tabel `sekilasinfo`
 --
 
 INSERT INTO `sekilasinfo` (`id_sekilas`, `info`, `tgl_posting`, `gambar`) VALUES
@@ -558,7 +587,7 @@ INSERT INTO `sekilasinfo` (`id_sekilas`, `info`, `tgl_posting`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shop_pengiriman`
+-- Struktur dari tabel `shop_pengiriman`
 --
 
 CREATE TABLE IF NOT EXISTS `shop_pengiriman` (
@@ -570,7 +599,7 @@ CREATE TABLE IF NOT EXISTS `shop_pengiriman` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
--- Dumping data for table `shop_pengiriman`
+-- Dumping data untuk tabel `shop_pengiriman`
 --
 
 INSERT INTO `shop_pengiriman` (`id_perusahaan`, `nama_perusahaan`, `alias`, `gambar`) VALUES
@@ -581,7 +610,7 @@ INSERT INTO `shop_pengiriman` (`id_perusahaan`, `nama_perusahaan`, `alias`, `gam
 -- --------------------------------------------------------
 
 --
--- Table structure for table `statistik`
+-- Struktur dari tabel `statistik`
 --
 
 CREATE TABLE IF NOT EXISTS `statistik` (
@@ -592,7 +621,7 @@ CREATE TABLE IF NOT EXISTS `statistik` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `statistik`
+-- Dumping data untuk tabel `statistik`
 --
 
 INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
@@ -676,12 +705,19 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2013-12-06', 187, '1386301411'),
 ('::1', '2013-12-07', 84, '1386432534'),
 ('::1', '2013-12-09', 8, '1386607106'),
-('::1', '2013-12-10', 4, '1386611074');
+('::1', '2013-12-10', 4, '1386611074'),
+('::1', '2014-11-13', 44, '1415897898'),
+('::1', '2014-11-14', 244, '1415953207'),
+('::1', '2014-11-16', 111, '1416143198'),
+('::1', '2014-12-05', 66, '1417794259'),
+('::1', '2014-12-13', 193, '1418458928'),
+('::1', '2014-12-14', 200, '1418568019'),
+('::1', '2014-12-15', 105, '1418646859');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `submenu`
+-- Struktur dari tabel `submenu`
 --
 
 CREATE TABLE IF NOT EXISTS `submenu` (
@@ -693,7 +729,7 @@ CREATE TABLE IF NOT EXISTS `submenu` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
--- Dumping data for table `submenu`
+-- Dumping data untuk tabel `submenu`
 --
 
 INSERT INTO `submenu` (`id_sub`, `nama_sub`, `link_sub`, `id_main`) VALUES
@@ -709,7 +745,7 @@ INSERT INTO `submenu` (`id_sub`, `nama_sub`, `link_sub`, `id_main`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subproduk`
+-- Struktur dari tabel `subproduk`
 --
 
 CREATE TABLE IF NOT EXISTS `subproduk` (
@@ -717,75 +753,70 @@ CREATE TABLE IF NOT EXISTS `subproduk` (
   `id_produk` int(5) NOT NULL,
   `gambar` varchar(200) NOT NULL,
   PRIMARY KEY (`id_subproduk`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=210 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=266 ;
 
 --
--- Dumping data for table `subproduk`
+-- Dumping data untuk tabel `subproduk`
 --
 
 INSERT INTO `subproduk` (`id_subproduk`, `id_produk`, `gambar`) VALUES
-(152, 570, '5_8263858.jpg'),
-(153, 570, '23_8263884.jpg'),
-(154, 570, '81_8264120.jpg'),
-(155, 570, '97_8264136.jpg'),
-(156, 560, '48_7371457.jpg'),
-(157, 560, '69_7371458.jpg'),
-(158, 560, '80_7371459.jpg'),
-(159, 560, '50_7371460.jpg'),
-(160, 561, '53_7846615.jpg'),
-(161, 561, '64_7846630.jpg'),
-(162, 561, '74_7846638.jpg'),
-(163, 561, '11_7846640.jpg'),
-(164, 562, '72_7366778.jpg'),
-(165, 562, '30_7366820.jpg'),
-(166, 562, '5_7366821.jpg'),
-(167, 562, '30_7366875.jpg'),
-(168, 563, '31adidas-originals-0208-164521-1-zoom.jpg'),
-(169, 563, '63adidas-originals-0209-164521-2-zoom.jpg'),
-(170, 563, '39adidas-originals-0211-164521-3-zoom.jpg'),
-(171, 563, '93adidas-originals-0213-164521-4-zoom.jpg'),
-(172, 564, '68am-eyewear-2217-62328-1-zoom.jpg'),
-(173, 564, '8am-eyewear-2217-62328-2-zoom.jpg'),
-(174, 564, '44am-eyewear-2217-62328-3-zoom.jpg'),
-(175, 564, '85am-eyewear-2217-62328-4-zoom.jpg'),
-(176, 565, '51bellroy-7596-24547-1-zoom.jpg'),
-(177, 565, '84bellroy-7596-24547-2-zoom.jpg'),
-(178, 565, '6bellroy-7596-24547-3-zoom.jpg'),
-(179, 565, '3bellroy-7596-24547-5-zoom.jpg'),
-(180, 566, '36ben-sherman-7194-955911-1-zoom.jpg'),
-(181, 566, '65ben-sherman-7245-955911-4-zoom.jpg'),
-(182, 566, '56ben-sherman-7210-955911-2-zoom.jpg'),
-(183, 566, '52ben-sherman-7271-955911-5-zoom.jpg'),
-(184, 567, '15calvin-klein-3322-550331-1-zoom.jpg'),
-(185, 567, '99calvin-klein-3324-550331-2-zoom.jpg'),
-(186, 567, '93calvin-klein-3325-550331-3-zoom.jpg'),
-(187, 567, '68calvin-klein-3328-550331-5-zoom.jpg'),
-(188, 568, '54_6285552.jpg'),
-(189, 568, '50_6285560.jpg'),
-(190, 568, '76_6285568.jpg'),
-(191, 568, '51_6285781.jpg'),
-(192, 569, '71colab-2383-380921-1-zoom.jpg'),
-(193, 569, '98colab-2384-380921-2-zoom.jpg'),
-(194, 569, '68colab-2386-380921-3-zoom.jpg'),
-(195, 570, '14_8263858.jpg'),
-(196, 570, '78_8263884.jpg'),
-(197, 570, '73_8264120.jpg'),
-(198, 570, '3_8264136.jpg'),
-(199, 571, '59_7930334.jpg'),
-(200, 571, '87_7930332.jpg'),
-(201, 572, '7ecko-7761-83579-1-zoom.jpg'),
-(202, 572, '51ecko-7761-83579-2-zoom.jpg'),
-(203, 573, '89_7390526.jpg'),
-(204, 573, '76_7390527.jpg'),
-(205, 574, '55_8227789.jpg'),
-(206, 574, '33_8227764.jpg'),
-(207, 574, '17_8227751.jpg'),
-(208, 575, '85_8043174.jpg');
+(255, 622, '83piggy-melati.jpg'),
+(254, 621, '84panda-po.jpg'),
+(253, 620, '12megan-foxy.jpg'),
+(252, 619, '16lady-baba.jpg'),
+(251, 618, '68giraffer-lopez-g-lo.jpg'),
+(250, 617, '68catherine-zebra-jones.jpg'),
+(249, 616, '95birdney-spears.jpg'),
+(248, 615, '51otw-on-the-way (1).jpg'),
+(247, 614, '35vip-vip-security.jpg'),
+(246, 613, '30security-vip-security.jpg'),
+(245, 612, '15tomat-sambal-tomat.jpg'),
+(244, 611, '21sambal-sambal-tomat.jpg'),
+(243, 610, '91supir-majikan-couple.jpg'),
+(242, 609, '63majikan-supir-majikan.jpg'),
+(241, 608, '61jaiko.jpg'),
+(240, 607, '61giant.jpg'),
+(239, 606, '60sleepy.jpg'),
+(238, 605, '34power-rangers.jpg'),
+(237, 604, '99mie-instan-theory (1).jpg'),
+(236, 603, '97mahasiswa-theory (1).jpg'),
+(235, 602, '68low-fat.jpg'),
+(234, 601, '45loved.jpg'),
+(233, 600, '26jomblo-theory.jpg'),
+(232, 599, '6hi-calcium.jpg'),
+(231, 598, '77happy.jpg'),
+(230, 597, '43free-wi-fi.jpg'),
+(229, 596, '61do-what-you-love.jpg'),
+(228, 595, '51deadline-theory (1).jpg'),
+(227, 593, '59cita-cita-pilot.jpg'),
+(226, 592, '3calories-hour (1).jpg'),
+(225, 591, '58busy.jpg'),
+(224, 590, '96bored.jpg'),
+(223, 590, '69bored.jpg'),
+(222, 589, '54besok-senin.jpg'),
+(221, 588, '21besok-libur.jpg'),
+(220, 587, '32belum-makan-glow-in-the-dark.jpg'),
+(219, 586, '64belum-gajian.jpg'),
+(218, 585, '23lulus (1).jpg'),
+(217, 584, '49presiden (2).jpg'),
+(213, 583, '77cita-cita-dokter.jpg'),
+(211, 581, '31belum-makan.jpg'),
+(212, 582, '85astronot.jpg'),
+(256, 623, '46pineapple-flatshoes.jpg'),
+(257, 624, '62princess-froggy.jpg'),
+(258, 625, '76cheese.jpg'),
+(259, 626, '59dakota-fanning.jpg'),
+(260, 627, '70emma-watson.jpg'),
+(261, 628, '35errol.jpg'),
+(262, 629, '59flora-red (1).jpg'),
+(263, 630, '37flora-red.jpg'),
+(264, 631, '8tree-necklace-green.jpg'),
+(265, 632, '2tree-necklace-rainbow.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tag`
+-- Struktur dari tabel `tag`
 --
 
 CREATE TABLE IF NOT EXISTS `tag` (
@@ -797,7 +828,7 @@ CREATE TABLE IF NOT EXISTS `tag` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=22 ;
 
 --
--- Dumping data for table `tag`
+-- Dumping data untuk tabel `tag`
 --
 
 INSERT INTO `tag` (`id_tag`, `nama_tag`, `tag_seo`, `count`) VALUES
@@ -819,7 +850,7 @@ INSERT INTO `tag` (`id_tag`, `nama_tag`, `tag_seo`, `count`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -840,16 +871,18 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`username`, `password1`, `password`, `nama_lengkap`, `alamat`, `email`, `aktivasi`, `cek_aktivasi`, `no_telp`, `id_kota`, `level`, `blokir`, `id_session`) VALUES
-('', '', '5f4dcc3b5aa765d61d8327deb882cf99', 'ilamsyah', 'tangerang', 'ilamsyah011@gmail.com', 0, 0, '0219298389', 10, 'user', 'N', '');
+('', '', '5f4dcc3b5aa765d61d8327deb882cf99', 'ilamsyah', 'tangerang', 'ilamsyah011@gmail.com', 0, 0, '0219298389', 10, 'user', 'N', ''),
+('maulina', 'ghoniy4', 'ghoniy4', '', '', '', 0, 0, '087824170407', 0, 'user', 'N', ''),
+('ghoniya', 'ghoniy4', 'ghoniy4', '', '', '', 0, 0, '087824170407', 0, 'user', 'N', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ym`
+-- Struktur dari tabel `ym`
 --
 
 CREATE TABLE IF NOT EXISTS `ym` (
@@ -860,7 +893,7 @@ CREATE TABLE IF NOT EXISTS `ym` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `ym`
+-- Dumping data untuk tabel `ym`
 --
 
 INSERT INTO `ym` (`id`, `nama`, `username`) VALUES
