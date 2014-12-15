@@ -1,0 +1,75 @@
+//Data Manipulation Language
+
+===product===
+
+insert into product values ('T001','KAOS UNIK 1','T-Shirt','S');
+insert into product values ('T002','KAOS UNIK 2','T-Shirt','M');
+insert into product values ('T003','KAOS UNIK 3','T-Shirt','L');
+insert into product values ('T004','KAOS UNIK 4','T-Shirt','XL);
+insert into product values ('T005','KAOS GAUL 1','T-Shirt','S');
+insert into product values ('T006','KAOS GAUL 2','T-Shirt','M');
+insert into product values ('T007','KAOS GAUL 3','T-Shirt','L');
+insert into product values ('A001','SCARF','ACC','S');
+insert into product values ('A002','KALUNG','ACC','S');
+insert into product values ('A003','BANDANA','ACC','S');
+insert into product values ('A004','HEADBAND','ACC','L');
+insert into product values ('A005','KALUNG','ACC','L');
+insert into product values ('A006','SCARF','ACC','L');
+insert into product values ('A007','HEADBAND','ACC','L');
+insert into product values ('S001','SEPATU BATIK 1','SHOES','38');
+insert into product values ('S002','SEPATU BIRU','SHOES','39');
+insert into product values ('S003','SEPATU HIJAU','SHOES','40');
+insert into product values ('S004','SEPATU BUNGA 1','SHOES','41');
+insert into product values ('S005','SEPATU BUNGA 2','SHOES','38');
+insert into product values ('S006','SEPATU BATIK 2','SHOES','39');
+
+=== order ===
+
+insert into order values ('ord001','AA-001','11-10-2014','12-10-2014');
+insert into order values ('ord002','AD-004','12-10-2014','12-10-2014');
+insert into order values ('ord003','AA-004','12-10-2014','12-10-2014');
+insert into order values ('ord004','AA-111','13-10-2014','19-10-2014');
+insert into order values ('ord005','AC-031','14-10-2014','19-10-2014');
+insert into order values ('ord006','BD-001','15-10-2014','19-10-2014');
+insert into order values ('ord007','BA-041','16-10-2014','19-10-2014');
+insert into order values ('ord008','BA-001','17-10-2014','19-10-2014');
+insert into order values ('ord009','BA-013','18-10-2014','19-10-2014');
+insert into order values ('ord010','BD-001','18-10-2014','19-10-2014');
+insert into order values ('ord011','AA-001','17-10-2014','19-10-2014');
+insert into order values ('ord012','AD-004','18-10-2014','19-10-2014');
+insert into order values ('ord013','AA-004','20-10-2014','26-10-2014');
+insert into order values ('ord014','AA-111','21-10-2014','26-10-2014');
+insert into order values ('ord015','AC-031','21-10-2014','26-10-2014');
+
+=== orderItem ===
+
+insert into orderItem values ('OI001','ord001','2','100000','2');
+insert into orderItem values ('OI002','ord001','3','210000','3');
+insert into orderItem values ('OI003','ord002','2','100000','2');
+insert into orderItem values ('OI004','ord002','5','500000','3');
+insert into orderItem values ('OI005','ord003','2','100000','2');
+insert into orderItem values ('OI006','ord003','3','210000','3');
+insert into orderItem values ('OI007','ord004','1','70000','2');
+insert into orderItem values ('OI008','ord004','3','240000','3');
+insert into orderItem values ('OI009','ord005','2','110000','2');
+insert into orderItem values ('OI010','ord005','1','70000','2');
+insert into orderItem values ('OI011','ord006','1','55000','2');
+insert into orderItem values ('OI012','ord006','1','85000','2');
+insert into orderItem values ('OI013','ord007','2','190000','2');
+insert into orderItem values ('OI014','ord007','1','95000','3');
+insert into orderItem values ('OI015','ord008','2','180000','3');
+insert into orderItem values ('OI016','ord008','1','90000','2');
+insert into orderItem values ('OI017','ord009','1','95000','2');
+insert into orderItem values ('OI018','ord009','1','100000','3');
+insert into orderItem values ('OI019','ord010','1','75000','2');
+insert into orderItem values ('OI020','ord010','1','85000','2');
+insert into orderItem values ('OI021','ord011','2','180000','3');
+insert into orderItem values ('OI022','ord011','3','150000','2');
+insert into orderItem values ('OI023','ord012','2','200000','2');
+insert into orderItem values ('OI024','ord012','3','210000','3');
+insert into orderItem values ('OI025','ord013','1','85000','2');
+insert into orderItem values ('OI026','ord013','1','50000','2');
+insert into orderItem values ('OI027','ord014','1','55000','3');
+insert into orderItem values ('OI028','ord014','1','55000','3');
+insert into orderItem values ('OI029','ord015','1','85000','4');
+insert into orderItem values ('OI030','ord015','2','140000','5');
